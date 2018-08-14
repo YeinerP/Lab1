@@ -33,9 +33,72 @@
 */
 
 #include <iostream>
-
+#include <stdio.h>
+#include <string.h>
 using namespace std;
-
+bool buscar_palabra(char array[], char array2[]){
+	int longitudfrase=strlen(array);
+	int longitudpalabra =strlen(array2);
+	int j=0;
+	for(int i=0;i<longitudfrase;i++){
+			if(array[i]==array2[j]){
+				j=j+1;	
+			}else{
+				j=0;
+			}
+			if(j+1==longitudpalabra){
+				return true;
+			}
+	}	
+	return false;
+}
+void ordenar(char array[]){
+	int longitud= strlen(array);
+	char c;
+	cout<<array<<endl;
+	for(int i=1; i<longitud; i++){
+		for(int j=0;j<longitud;j++){
+			if(array[i]< array[j]){
+				c=array[j];
+				array[j]=array[i];
+				array[i]=c;
+			}			
+		}
+	}
+	cout<<array<<endl;
+	
+}
+ bool esAnagrama(char array1[], char array2[]) {
+	int longitud1 =(unsigned)strlen(array1);
+	int longitud2=(unsigned)strlen(array2);
+	cout<<array1<<endl;
+	cout<<array2<<endl;
+		if (longitud1==longitud2) {
+			int i=0;
+			int j=0;
+			 char c;
+			 int suma=0;
+			 int suma2=0;
+  		while (array1[i])
+ 		 {
+    	c=array1[i];
+    	//putchar (toupper(c));
+    	suma= suma +toupper(c);
+    	i++;
+  }
+  	while (array2[j])
+ 		 {
+    	c=array2[j];
+    	//putchar (toupper(c));
+    	suma2= suma2 +toupper(c);
+    	j++;
+  }
+	if(suma == suma2){
+		return true;
+	
+		}}
+  return false; 
+   }
 //Aqui se declaran las variables globales
 
 //Aqui se declaran los prototipos de las funciones
@@ -75,6 +138,7 @@ int main()
 	//Esta funcion es la mas importante del programa
 	//En esta funcion se deben invocar las funciones que 
 	//usted codifique en C++
+	
 	unsigned short int dia, mes, year;
 	//Declarando una variable localecon
 	cout<<"ingrese dia"<<endl;
@@ -92,6 +156,26 @@ int main()
 	else{
 		cout<<"Fecha presenta errores!"<<endl;
 }
+	char array1[]="Camara";
+	char array2[]="maraca";
+	char array12[]="hola como estas";
+	char array13[]="como";
+	char palabra[]="vAca";
+		ordenar(palabra);
+	bool respuesta= esAnagrama(array1,array2);
+		bool respuesta1= buscar_palabra(array12,array13);
+	if(respuesta){
+		cout<<"es un anagrama"<<endl;
+	}else{
+    	cout<<" no es un anagrama"<<endl;
+	}
+
+	if(respuesta1){
+		cout<<"la palabra esta en la frase "<<endl;
+		
+	}else{
+		cout<<"la palabra no esta en la frase"<<endl;
+	}
 	return 0;
 }
 

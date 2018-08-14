@@ -1,2 +1,0 @@
-yeiner pajaro
-diego morales

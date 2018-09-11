@@ -1,3 +1,6 @@
+//Yeiner David Pájaro Otero
+// Diego Alejandro Morales Muñoz
+
 #include <iostream>
 #include <conio.h>
 #include <string.h>
@@ -42,7 +45,7 @@ cout<<"El tamanio de la segunda estructura es: "<< sizeb<<" bytes "<<endl;
 	getch();
 	return 0;
 }
-// El resultado de la operaci�n es el tama�o del operando en bytes o el tama�o de la representaci�n de la memoria. 
+// El resultado de la operación es el tamaño del operando en bytes o el tamaño de la representación de la memoria. 
 
 void mostrarDatos(Persona *puntero_persona){
 	cout<<" Metodo puntero "<<endl;
